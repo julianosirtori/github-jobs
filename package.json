@@ -19,7 +19,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "component:gen": "yarn hygen components with-prompt"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,6 +48,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.3",
-    "eslint-plugin-react-hooks": "^4.0.8"
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "hygen": "^6.0.4"
   }
 }
