@@ -23,6 +23,7 @@ module.exports = {
       { extensions: ['.jsx', '.js'] },
     ],
     'react/prop-types': 'off',
+    'react/jsx-props-no-spreading': 'off',
     'import/prefer-default-export': 'off',
   },
 };

@@ -22,8 +22,8 @@ const BadgeContainer = styled.div`
 
 `;
 
-const Badge = ({ children }) => (
-  <BadgeContainer>
+const Badge = ({ children, props }) => (
+  <BadgeContainer {...props}>
     <Text fontWeight="bold" color="primary">{children}</Text>
   </BadgeContainer>
 );
