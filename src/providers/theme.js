@@ -5,7 +5,9 @@ const theme = {
     primary: '#334680',
     primaryDark: '#282538',
     secondary: '#1E86FF',
-    light: '#B9BDCF',
+    textLight: '#B9BDCF',
+
+    white: '#fff',
 
   },
   fontSizes: [12, 14, 16, 18, 24],
