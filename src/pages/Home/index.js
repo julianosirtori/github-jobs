@@ -1,7 +1,11 @@
 import React from 'react';
 
+import Flex from '../../components/atoms/Flex';
+
 function Home() {
-  return <h1>Home</h1>;
+  return (
+    <Flex />
+  );
 }
 
 export default Home;
