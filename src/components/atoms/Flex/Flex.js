@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { layout } from 'styled-system';
+import { layout, padding } from 'styled-system';
 
 const flexVariations = {
   centered: css`
@@ -10,6 +10,7 @@ const flexVariations = {
 
 const Flex = styled.div`
   ${layout}
+  ${padding}
   display: flex;
   flex-direction: column;
 

@@ -6,4 +6,4 @@ export default {
   component: Flex,
 };
 
-export const Default = () => < Flex />;
+export const Default = () => <Flex />;
