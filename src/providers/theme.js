@@ -7,6 +7,9 @@ const theme = {
     secondary: '#1E86FF',
     textLight: '#B9BDCF',
 
+    textDisabled: '#BDBDBD',
+    backgroundAvatar: '#F2F2F2',
+
     white: '#fff',
 
   },
