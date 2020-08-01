@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import {
-  fontSize, fontWeight, padding,
+  layout, fontSize, fontWeight, space, color,
 } from 'styled-system';
 
 const inputVariations = {
@@ -16,7 +17,9 @@ const inputVariations = {
 const ContainerStyled = styled.div`
   ${fontSize}
   ${fontWeight}
-  ${padding}
+  ${space}
+  ${layout}
+  ${color}
 
   background: ${(props) => props.theme.colors.white};
   border-radius: ${(props) => props.theme.borderRadius[0]}px;
@@ -25,7 +28,7 @@ const ContainerStyled = styled.div`
   flex-direction: row;
   align-items: center;
   color:  ${(props) => props.theme.colors.textLight};
-  font-size:  ${(props) => props.theme.fontSizes[0]};
+  font-size:  ${(props) => props.theme.fontSizes.small};
 
   ${({ variant }) => inputVariations[variant || 'small']}
 
@@ -36,10 +39,22 @@ const ContainerStyled = styled.div`
   }
 `;
 
-const Input = ({ sufix, prefix, ...props }) => {
+const Input = ({
+  sufix, maxWidth, prefix, ...props
+}) => {
+  if (sufix && prefix) {
+    return (
+      <ContainerStyled maxWidth={maxWidth} {...props}>
+        {sufix}
+        <input {...props} />
+        {prefix}
+      </ContainerStyled>
+    );
+  }
+
   if (sufix) {
     return (
-      <ContainerStyled>
+      <ContainerStyled {...props}>
         {sufix}
         <input {...props} />
       </ContainerStyled>
@@ -48,7 +63,7 @@ const Input = ({ sufix, prefix, ...props }) => {
 
   if (prefix) {
     return (
-      <ContainerStyled>
+      <ContainerStyled {...props}>
         <input {...props} />
         {prefix}
       </ContainerStyled>
@@ -56,10 +71,22 @@ const Input = ({ sufix, prefix, ...props }) => {
   }
 
   return (
-    <ContainerStyled>
+    <ContainerStyled {...props}>
       <input {...props} />
     </ContainerStyled>
   );
+};
+
+Input.propTypes = {
+  sufix: PropTypes.any,
+  prefix: PropTypes.any,
+  maxWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+};
+
+Input.defaultProps = {
+  sufix: null,
+  prefix: null,
+  maxWidth: 'auto',
 };
 
 export default Input;

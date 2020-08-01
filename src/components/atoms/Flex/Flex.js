@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
-import { layout, padding } from 'styled-system';
+import {
+  layout, padding, color, space, background, border,
+} from 'styled-system';
 
 const flexVariations = {
   centered: css`
@@ -11,8 +13,12 @@ const flexVariations = {
 const Flex = styled.div`
   ${layout}
   ${padding}
+  ${color}
+  ${space}
+  ${background}
+  ${border}
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ flexDirection }) => (flexDirection || 'row')} ;
 
   ${({ variant }) => flexVariations[variant]}
 `;

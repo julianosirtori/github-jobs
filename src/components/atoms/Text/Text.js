@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import {
-  color, fontSize, fontWeight,
+  color, fontSize, fontWeight, space,
 } from 'styled-system';
 
 const textVariations = {
@@ -13,6 +13,7 @@ const Text = styled.span`
   ${color}
   ${fontSize}
   ${fontWeight}
+  ${space}
 
   ${({ variant }) => textVariations[variant]}
 `;

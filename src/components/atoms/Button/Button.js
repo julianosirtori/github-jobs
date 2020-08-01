@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import PropTypes from 'prop-types';
 import {
   fontSize, fontWeight, padding,
 } from 'styled-system';
@@ -30,5 +31,13 @@ const Button = styled.button`
 
   ${({ variant }) => buttonVariations[variant || 'big']}
 `;
+
+Button.propTypes = {
+  variant: PropTypes.string,
+};
+
+Button.defaultProps = {
+  variant: 'big',
+};
 
 export default Button;
