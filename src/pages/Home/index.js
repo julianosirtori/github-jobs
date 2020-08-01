@@ -3,6 +3,8 @@ import React from 'react';
 import Flex from '../../components/atoms/Flex';
 import Text from '../../components/atoms/Text';
 import SearchJob from '../../components/molecules/SearchJob';
+import ListJobs from '../../components/organisms/ListJobs';
+import Filters from '../../components/molecules/Filters';
 
 function Home() {
   return (
@@ -15,9 +17,9 @@ function Home() {
 
         <SearchJob marginBottom={42} />
 
-        <Flex>
-          <Flex />
-          <Flex />
+        <Flex justifyContent="space-between" width="100%" marginRight="32">
+          <Filters width="100%" maxWidth="320px" marginRight={32} />
+          <ListJobs />
         </Flex>
       </Flex>
 
