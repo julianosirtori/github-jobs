@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import {
-  fontSize, fontWeight, padding, layout,
+  fontSize, fontWeight, padding, layout, space,
 } from 'styled-system';
 
 import Text from '../Text';
@@ -24,6 +24,7 @@ const AvatarStyled = styled.img`
   ${fontWeight}
   ${padding}
   ${layout}
+  ${space}
 
   border: none;
   border-radius: 4px;
