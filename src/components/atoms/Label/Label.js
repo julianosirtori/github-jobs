@@ -17,16 +17,15 @@ const LabelContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: ${(props) => props.color};
   padding: 4px 8px;
-  border: 1px solid ${(props) => props.color};
+  border: 1px solid ${({ theme }) => theme.colors.primary};
   border-radius: ${(props) => props.theme.borderRadius[0]}px;
   width: max-content;
 `;
 
 const Label = ({ children, color, ...props }) => (
   <LabelContainer color={color} {...props}>
-    <Text fontWeight="bold" color="white">{children}</Text>
+    <Text fontWeight="bold" color="primary">{children}</Text>
   </LabelContainer>
 );
 

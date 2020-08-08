@@ -1,27 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import {
+  layout, padding, space, background,
+} from 'styled-system';
 import styled from 'styled-components';
+
 import Avatar from '../../atoms/Avatar';
 import Flex from '../../atoms/Flex';
 import Label from '../../atoms/Label';
 import Text from '../../atoms/Text';
 
-const JobItemStyled = styled(Flex)`
+const JobItemStyled = styled(Link)`
+  ${space}
+  ${background}
+  ${padding}
+  ${layout}
+
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
   transition: all .2s ease-in-out;
+  display: flex;
+  border-radius: 4px;
 
   &:hover{
     cursor: pointer;
-    transform: scale(1.05); 
+    transform: scale(1.02); 
   }
 
 `;
 
 const JobItem = ({ job }) => (
   <JobItemStyled
+    to={`/job/${job.number}`}
     background="white"
     width="100%"
-    borderRadius={4}
     padding={12}
   >
     <Avatar src={job.user.avatar_url} marginRight={16} />

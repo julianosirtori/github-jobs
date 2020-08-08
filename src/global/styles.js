@@ -20,6 +20,7 @@ export default createGlobalStyle`
 
   body {
     -webkit-font-smoothing: antialiased;
+    overflow-y: scroll;
   }
 
   body, input, button {

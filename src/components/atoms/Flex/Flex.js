@@ -22,7 +22,8 @@ const Flex = styled.div`
 
   display: flex;
   flex-direction: ${({ flexDirection }) => (flexDirection || 'row')} ;
-  justify-content: ${({ justifyContent }) => (justifyContent || 'start')} ;
+  justify-content: ${({ justifyContent }) => (justifyContent || 'flex-start')} ;
+  align-items:  ${({ alignItems }) => (alignItems || 'flex-start')} ;
 
   ${({ variant }) => flexVariations[variant]}
 `;
@@ -31,6 +32,7 @@ Flex.propTypes = {
   flexDirection: PropTypes.string,
   justifyContent: PropTypes.string,
   variant: PropTypes.string,
+  alignItems: PropTypes.string,
 };
 
 export default Flex;
