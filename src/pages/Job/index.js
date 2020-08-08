@@ -26,7 +26,6 @@ function Job() {
   }, [id]);
 
   return issue ? (
-
     <Flex flexDirection="column">
       <Flex marginBottom="16px">
         <Link to="/">
@@ -34,9 +33,7 @@ function Job() {
             <BsArrowLeft color="#334680" size={24} />
             <Text color="primary" fontSize="large">Voltar</Text>
           </Flex>
-
         </Link>
-
       </Flex>
 
       <Flex justifyContent="center" alignItems="center">

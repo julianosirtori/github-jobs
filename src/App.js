@@ -16,8 +16,8 @@ function App() {
       <Flex minHeight="100%" bg="#F6F7FB">
         <Flex flexDirection="column" marginY="32px" marginX="auto" maxWidth={1200} width="100%" minHeight="100%">
           <Flex marginBottom="32px">
-            <Text fontSize="xlarge" marginRight="4px" fontWeight="bold">Github</Text>
-            <Text fontSize="xlarge">Jobs</Text>
+            <Text fontSize="xlarge" marginRight="4px" fontWeight="bold">Front-end</Text>
+            <Text fontSize="xlarge">Vagas</Text>
           </Flex>
           <BrowserRouter>
             <Routes />

@@ -15,13 +15,17 @@ function Home() {
     setJobs(data);
   }
 
+  function searchJobs(jobsSearch) {
+    setJobs(jobsSearch);
+  }
+
   useEffect(() => {
     fetchJobs();
   }, []);
 
   return (
-    <Flex flexDirection="column">
-      <SearchJob marginBottom={42} />
+    <Flex flexDirection="column" width="100%">
+      <SearchJob onClick={searchJobs} marginBottom={42} />
       <Flex justifyContent="space-between" width="100%" marginRight="32">
         <ListJobs jobs={jobs} />
       </Flex>
