@@ -23,6 +23,7 @@ function Job() {
 
   useEffect(() => {
     fetchIssue();
+    // eslint-disable-next-line
   }, [id]);
 
   return issue ? (
